@@ -12,4 +12,14 @@ function GetAllBooks (): Book[] {
   return books
 }
 
-console.log(GetAllBooks())
+let a = GetAllBooks() 
+
+a.sort( (a, b) => ( b.id - a.id ) ).forEach(item => {
+    console.log(item)
+})
+
+a.shift()
+console.log (' ')
+a.pop()
+
+a.forEach(item => console.log(item))
